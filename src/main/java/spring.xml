@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="c1" class="com.ssi.Customer" parent="areaInfo">
+		<property name="code" value="1111" />
+		<property name="cname" value="ABCD" />
+		<property name="email" value="abcd@gmail.com" />
+	</bean>
+	<bean id="c2" class="com.ssi.Customer" parent="areaInfo">
+		<property name="code" value="2222" />
+		<property name="cname" value="PQRS" />
+		<property name="email" value="pqrs@gmail.com" />
+		<property name="city" value="Indore" />
+	</bean>
+	
+	<bean id="areaInfo" abstract="true">
+		<property name="city" value="Bhopal"/>
+		<property name="state" value="MP"/>
+	</bean>
+	
+	
+	
+<!-- 	<bean id="area" class="com.ssi.Area">
+		<property name="city" value="Bhopal"/>
+		<property name="state" value="MP"/>
+	</bean>
+ -->	
+	
+</beans>
